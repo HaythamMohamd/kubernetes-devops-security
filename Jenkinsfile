@@ -5,7 +5,7 @@ pipeline {
       stage('Build Artifact') {
             steps {
               sh "mvn clean package -DskipTests=true"
-              sh "echo testing again again webhook"
+              sh "echo testing from mylab webhook"
               archive 'target/*.jar' //so that they can be downloaded later
             }
         }   
