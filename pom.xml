@@ -47,9 +47,8 @@
 			</plugin>
 			
 		</plugins>
-			<!--                   Jacoco Plugin                   -->
-			   <plugin>
-			    <groupId>org.jacoco</groupId>
+			<plugin>
+				<groupId>org.jacoco</groupId>
 			    <artifactId>jacoco-maven-plugin</artifactId>
 			    <version>0.8.5</version>
 			    <executions>
@@ -66,7 +65,7 @@
 			      </goals>
 			     </execution>
 			    </executions>
-			   </plugin>
+			</plugin>
 
 	</build>
 
