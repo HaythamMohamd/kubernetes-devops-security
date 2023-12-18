@@ -12,7 +12,7 @@ pipeline {
 
       stage('Unit Tests - JUnit and Jacoco') {
         steps {
-          sh 'mvn test'
+          sh "mvn test"
         }
         post {
           always {
@@ -23,4 +23,4 @@ pipeline {
       } 
 
       }  
-    }
+}
