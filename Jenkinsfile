@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   stages {
-      stage('Build Artifact') {
+      stage('Build Artifact - Maven') {
             steps {
               sh "mvn clean package -DskipTests=true"
               sh "echo testing from mylab webhook"
@@ -14,14 +14,13 @@ pipeline {
         steps {
           sh 'mvn test'
         }
-        post{
-            always{
-                junit 'target/surefire-reports/*.xml'
-                jacoco execPattern: 'target/jacoco.exec'
-            }
+        post {
+          always {
+            junit 'target/surefire-reports/*.xml'
+            jacoco execPattern: 'target/jacoco.exec'
+          }
         }
       } 
 
       }  
     }
-}
